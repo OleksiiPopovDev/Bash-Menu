@@ -1,0 +1,6 @@
+dist
+dist/*
+build
+build/*
+Bash-Menu-Builder.egg-info
+Bash-Menu-Builder.egg-info/*
