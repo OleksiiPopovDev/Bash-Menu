@@ -4,6 +4,6 @@ install:
 	@pip3 install twine
 
 .PHONY: publish
-create:
+publish:
 	@python3 setup.py sdist
 	@twine upload dist/*
