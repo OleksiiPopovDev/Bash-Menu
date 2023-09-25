@@ -1,7 +1,6 @@
 .PHONY: install
 install:
-	@pip3 install setuptools
-	@pip3 install twine
+	@pip3 install -r requirements.txt
 
 .PHONY: publish
 publish:

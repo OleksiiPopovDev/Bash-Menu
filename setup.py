@@ -8,7 +8,7 @@ def readme():
 
 setup(
     name='bash_menu_builder',
-    version='1.0.0',
+    version='1.1.0',
     author='Oleksii.Popov',
     author_email='popovaleksey1991@gmail.com',
     description='Bash Menu Builder',
@@ -23,7 +23,7 @@ setup(
     ],
     keywords='bash menu vizual python',
     project_urls={
-        'Documentation': 'https://github.com/OleksiiPopovDev/Bash-Menu'
+        'Documentation': 'https://github.com/OleksiiPopovDev/Bash-Menu-Builder'
     },
     python_requires='>=3.9'
 )
