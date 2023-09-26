@@ -50,7 +50,7 @@ if __name__ == "__main__":
     )
 ```
 #### View Menu
-<img src="https://raw.githubusercontent.com/OleksiiPopovDev/Bash-Menu-Builder/main/doc/example-1.gif" alt="How it works" style="width:100%;" />
+<img src="https://raw.githubusercontent.com/OleksiiPopovDev/Bash-Menu-Builder/main/doc/example-input.gif" alt="How it works" style="width:100%;" />
 
 ### The Select type Menu
 ```python
@@ -81,7 +81,7 @@ if __name__ == "__main__":
     )
 ```
 #### View Menu
-<img src="https://raw.githubusercontent.com/OleksiiPopovDev/Bash-Menu-Builder/main/doc/example-2.gif" alt="How it works" style="width:100%;" />
+<img src="https://raw.githubusercontent.com/OleksiiPopovDev/Bash-Menu-Builder/main/doc/example-select.gif" alt="How it works" style="width:100%;" />
 
 ## Draw menu
 The menu draw via class ``View`` which get params of array with DTOs and text of banner (optional)
@@ -96,4 +96,4 @@ After select menu number and press Enter will run script in function. When scrip
 Also you can call script without drawing menu. Just set option when call python script file, ex. ``python3 main.py --three``
 In this case will run script for menu **'Menu Item Three'**. When script finish process menu will not draw again and program will close.
 
-<img src="https://github.com/OleksiiPopovDev/Bash-Menu-Builder/blob/main/doc/example-3.png?raw=true" alt="How it works" style="width:100%;" />
+<img src="https://github.com/OleksiiPopovDev/Bash-Menu-Builder/blob/main/doc/example-console.png?raw=true" alt="How it works" style="width:100%;" />
