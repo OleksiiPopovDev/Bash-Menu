@@ -1,37 +1,51 @@
 from bash_menu_builder import input_menu, select_menu, menu_item_dto
-from bash_menu_builder.draw import Draw
+import time
 
 
-def test():
-    print('Test')
-    Draw.separator('=')
+def banner_text() -> str:
+    return '\t\tI\'m Banner Text\n\n'
 
 
-def test2():
-    print('Test2')
-    Draw.separator('.')
+def function_one() -> None:
+    print('Some process ...')
+    time.sleep(2)
+    print('Result of Script One\n')
 
 
-def test3():
-    print('Test3')
-    Draw.separator('+')
+def function_two() -> None:
+    print('Some process ...')
+    time.sleep(2)
+    print('Result of Script Two\n')
+
+
+def function_three() -> None:
+    print('Some process ...')
+    time.sleep(2)
+    print('Result of Script Three\n')
+
+
+def select_menu_view() -> None:
+    select_menu.SelectMenu(
+        menu=[
+            menu_item_dto.MenuItemDto(title='Menu Item One', option='one', handler=function_one),
+            menu_item_dto.MenuItemDto(title='Menu Item Two', option='two', handler=function_two),
+            menu_item_dto.MenuItemDto(title='Menu Item Three', option='three', handler=function_three),
+        ],
+        banner=banner_text()
+    )
+
+
+def input_menu_view() -> None:
+    input_menu.InputMenu(
+        menu=[
+            menu_item_dto.MenuItemDto(title='Menu Item One', option='one', handler=function_one),
+            menu_item_dto.MenuItemDto(title='Menu Item Two', option='two', handler=function_two),
+            menu_item_dto.MenuItemDto(title='Menu Item Three', option='three', handler=function_three),
+        ],
+        banner=banner_text()
+    )
 
 
 if __name__ == '__main__':
-    select_menu.SelectMenu(
-        menu=[
-            menu_item_dto.MenuItemDto(title='Test', option_name='test', handler=test),
-            menu_item_dto.MenuItemDto(title='Test2', option_name='test2', handler=test2),
-            menu_item_dto.MenuItemDto(title='Test3', option_name='test3', handler=test3),
-        ],
-        banner='\n\n\t\t\tBANNER'
-    )
-    exit()
-    input_menu.InputMenu(
-        menu=[
-            menu_item_dto.MenuItemDto(title='Test', option_name='test', handler=test),
-            menu_item_dto.MenuItemDto(title='Test2', option_name='test2', handler=test2),
-            menu_item_dto.MenuItemDto(title='Test3', option_name='test3', handler=test3),
-        ],
-        banner='\n\n\t\t\tBANNER'
-    )
+    #input_menu_view()
+    select_menu_view()

@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 
 def readme():
@@ -16,6 +16,7 @@ setup(
     long_description_content_type='text/markdown',
     url='https://github.com/OleksiiPopovDev/Bash-Menu-Builder',
     packages=['bash_menu_builder'],
+    install_requires=['pynput==1.7.6'],
     classifiers=[
         'Programming Language :: Python :: 3.11',
         'License :: OSI Approved :: MIT License',

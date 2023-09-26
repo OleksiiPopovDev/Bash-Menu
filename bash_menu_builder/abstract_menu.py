@@ -15,12 +15,12 @@ class AbstractMenu(ABC):
     def __check_options(self):
         if '--help' in sys.argv:
             for menu_item in self._menu_items:
-                option = '--%s' % menu_item.option_name
+                option = '--%s' % menu_item.option
                 print('\t%s\t\t - %s' % (option, menu_item.title))
             exit()
 
         for menu_item in self._menu_items:
-            option = '--%s' % menu_item.option_name
+            option = '--%s' % menu_item.option
             if option in sys.argv:
                 self._call_handler(menu_item.handler)
                 exit()
