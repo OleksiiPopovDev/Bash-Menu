@@ -7,6 +7,8 @@
 
 This package help you build menu for yours console scripts
 
+[Installation](#installation) | [Usage](#usage) | [Draw menu](#draw-menu) | [How it works](#how-it-works)
+
 ## Installation
 For install package to your project use this command:
 ```shell
@@ -15,8 +17,8 @@ pip3 install bash-menu-builder
 
 ## Usage
 Script give opportunity use two type views of menu:
- - Input Menu
- - Select Menu
+ - [Input Menu](#the-input-type-menu)
+ - [Select Menu](#the-select-type-menu)
 
 ### The Input type Menu
 
@@ -48,7 +50,7 @@ if __name__ == "__main__":
     )
 ```
 #### View Menu
-<img src="https://github.com/OleksiiPopovDev/Bash-Menu-Builder/blob/main/doc/example-1.gif?raw=true" alt="How it works" style="width:100%;" />
+<img src="https://raw.githubusercontent.com/OleksiiPopovDev/Bash-Menu-Builder/main/doc/example-1.gif" alt="How it works" style="width:100%;" />
 
 ### The Select type Menu
 ```python
@@ -79,7 +81,7 @@ if __name__ == "__main__":
     )
 ```
 #### View Menu
-<img src="https://github.com/OleksiiPopovDev/Bash-Menu-Builder/blob/main/doc/example-2.gif?raw=true" alt="How it works" style="width:100%;" />
+<img src="https://raw.githubusercontent.com/OleksiiPopovDev/Bash-Menu-Builder/main/doc/example-2.gif" alt="How it works" style="width:100%;" />
 
 ## Draw menu
 The menu draw via class ``View`` which get params of array with DTOs and text of banner (optional)
@@ -89,8 +91,6 @@ The MenuItemDto have 3 params ``def __init__(self, title: str, option_name: str,
  - ``handler: object`` - the handler of menu item. What exactly script do after select this menu item.
 
 ## How it works
-<img src="https://github.com/OleksiiPopovDev/Bash-Menu-Builder/blob/main/doc/example-1.png?raw=true" alt="How it works" style="width:100%;" />
-
 After select menu number and press Enter will run script in function. When script finish process menu will draw again.
 
 Also you can call script without drawing menu. Just set option when call python script file, ex. ``python3 main.py --three``
