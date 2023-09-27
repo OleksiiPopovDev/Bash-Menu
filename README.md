@@ -42,9 +42,9 @@ def function_three() -> None:
 if __name__ == "__main__":
     InputMenu(
         menu=[
-            MenuItemDto(title='Test', option='test', handler=function_one),
-            MenuItemDto(title='Test2', option='test2', handler=function_two),
-            MenuItemDto(title='Test3', option='test3', handler=function_three),
+            MenuItemDto(title='Test', option='one', handler=function_one),
+            MenuItemDto(title='Test2', option='two', handler=function_two),
+            MenuItemDto(title='Test3', option='three', handler=function_three),
         ],
         banner=banner_text()
     )
