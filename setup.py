@@ -8,7 +8,7 @@ def readme():
 
 setup(
     name='bash_menu_builder',
-    version='1.1.3',
+    version='1.1.4',
     author='Oleksii.Popov',
     author_email='popovaleksey1991@gmail.com',
     description='Bash Menu Builder',
