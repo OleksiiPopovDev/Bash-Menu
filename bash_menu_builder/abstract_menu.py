@@ -60,7 +60,8 @@ class AbstractMenu(ABC):
         big_line_count: int = Draw.count_biggest_line(args)
 
         for index, arg in enumerate(args):
-            spaces: int = Draw.get_count_spaces_for_line_up(arg, big_line_count)            print('%s%s : %s' % (
+            spaces: int = Draw.get_count_spaces_for_line_up(arg, big_line_count)
+            print('%s%s : %s' % (
                 arg,
                 ' ' * spaces,
                 desc[index]
