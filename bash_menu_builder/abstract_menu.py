@@ -12,6 +12,7 @@ class AbstractMenu(ABC):
         self._menu_items = menu
         self._banner = banner
         self.__check_options()
+        self.show_menu()
 
     def __check_options(self) -> None:
         short_opts: str = 'h'
@@ -68,3 +69,6 @@ class AbstractMenu(ABC):
             ))
 
         exit()
+
+    def show_menu(self) -> None:
+        pass

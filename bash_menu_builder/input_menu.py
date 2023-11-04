@@ -24,7 +24,12 @@ class InputMenu(AbstractMenu):
         try:
             selected_menu = int(input(Draw.paint("\t\t{Green}Choose menu number {ColorOff}>> "))) - 1
             menu_item = self._menu_items[selected_menu]
-            self._call_handler(menu_item.handler)
+            argument: str = ''
+
+            if menu_item.option.has_value:
+                argument: str = input(Draw.paint("\t\t{Green}Enter value {ColorOff}>> "))
+
+            self._call_handler(menu_item.handler, argument)
             self.__draw_menu()
 
         except (RuntimeError, ValueError, KeyboardInterrupt, IndexError):

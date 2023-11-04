@@ -72,5 +72,5 @@ def input_menu_view() -> None:
 
 
 if __name__ == '__main__':
-    input_menu_view()
-    # select_menu_view()
+    #input_menu_view()
+    select_menu_view()
