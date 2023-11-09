@@ -27,7 +27,9 @@ class InputMenu(AbstractMenu):
             argument: str = ''
 
             if menu_item.option.has_value:
-                argument: str = input(Draw.paint("\t\t{Green}Enter value {ColorOff}>> "))
+                argument: str = input(Draw.paint(
+                    "\t\t{Green}Set options `%s` {ColorOff}>> " % menu_item.option.long_option
+                ))
 
             self._call_handler(menu_item.handler, argument)
             self.__draw_menu()

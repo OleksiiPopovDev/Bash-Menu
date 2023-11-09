@@ -7,6 +7,12 @@ class SelectMenu(AbstractMenu):
     selected_menu: int = 1
 
     def show_menu(self) -> None:
+        for item in self._menu_items:
+            if item.option.has_value:
+                message = '\t{Red}Unfortunately, you can\'t use Select Menu with params which has arguments!{ColorOff}'
+                print(Draw.paint(message))
+                exit()
+
         with Listener(on_release=self.__listen_key) as listener:
             self.__draw_menu()
             listener.join()
@@ -65,4 +71,4 @@ class SelectMenu(AbstractMenu):
     def __pressed_enter(self):
         print('\033c')
         menu_item = self._menu_items[self.selected_menu - 1]
-        self._call_handler(menu_item.handler)
+        self._call_handler(menu_item.handler, '')

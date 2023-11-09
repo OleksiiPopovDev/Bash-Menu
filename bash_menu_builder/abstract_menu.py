@@ -8,7 +8,7 @@ import getopt
 
 class AbstractMenu(ABC):
     def __init__(self, menu: list[MenuItemDto], banner: str = None) -> None:
-        signal.signal(signal.SIGINT, lambda s, f: sys.exit(Draw.paint('\r\n{Yellow}Exiting...{ColorOff}')))
+        signal.signal(signal.SIGINT, lambda s, f: sys.exit(Draw.paint('\r{Yellow}Exiting...{ColorOff}')))
         self._menu_items = menu
         self._banner = banner
         self.__check_options()
