@@ -23,7 +23,7 @@ def function_two() -> None:
 def function_three() -> None:
     print('Some process ...')
     time.sleep(1)
-    print('Result of Script Three')
+    print('Result of Script Three\n')
 
 
 def function_four(argument: str) -> None:
@@ -39,9 +39,10 @@ def menu_list() -> list[menu_item_dto.MenuItemDto]:
             title='Menu Item One',
             option=command_option_dto.CommandOptionDto(
                 long_option='one',
-                short_option='o'
+                short_option='o',
             ),
-            handler=function_one
+            handler=function_one,
+            priority=2
         ),
         menu_item_dto.MenuItemDto(
             title='Menu Item Two',
