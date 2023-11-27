@@ -1,5 +1,6 @@
 from .color import Color
 from .draw import Draw
+from .message import Message
 from .abstract_menu import AbstractMenu
 
 
@@ -35,5 +36,6 @@ class InputMenu(AbstractMenu):
             self.__draw_menu()
 
         except (RuntimeError, ValueError, KeyboardInterrupt, IndexError):
-            print(Draw.paint('\t\t{BRed}Error: {Red} Incorrect selected menu!{ColorOff}\n'))
+            Message.set_tabs(2)
+            Message.error(message='Incorrect selected menu!')
             self.__propose_choose()

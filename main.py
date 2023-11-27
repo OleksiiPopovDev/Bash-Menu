@@ -2,6 +2,7 @@ import time
 
 from bash_menu_builder import input_menu, select_menu
 from bash_menu_builder.dto import command_option_dto, menu_item_dto
+from bash_menu_builder.message import Message
 
 
 def banner_text() -> str:
@@ -89,5 +90,11 @@ def input_menu_view() -> None:
 
 
 if __name__ == '__main__':
-    input_menu_view()
-    #select_menu_view()
+    Message.error(message='This is Error Message for test New length string \nTest')
+    Message.set_tabs(1)
+    Message.warning(message='This is Error Message for test New length string \nTest')
+    Message.set_tabs(2)
+    Message.success(title='Some Title Text', message='This is Error \nMessage')
+    # exit()
+    # input_menu_view()
+    select_menu_view()

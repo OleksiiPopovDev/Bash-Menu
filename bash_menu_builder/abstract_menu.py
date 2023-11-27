@@ -60,7 +60,7 @@ class AbstractMenu(ABC):
         args: list[str] = []
         desc: list[str] = []
         for menu_item in self._menu_items:
-            args.append('\t-%s --%s%s' % (
+            args.append('\t-%s, --%s%s' % (
                 menu_item.option.short_option,
                 menu_item.option.long_option,
                 (' <argument>' if menu_item.option.has_value else ''),

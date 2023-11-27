@@ -1,6 +1,7 @@
 from .abstract_menu import AbstractMenu
 from pynput.keyboard import Key, Listener
 from .draw import Draw
+from .message import Message
 
 
 class SelectMenu(AbstractMenu):
@@ -9,8 +10,11 @@ class SelectMenu(AbstractMenu):
     def show_menu(self) -> None:
         for item in self._menu_items:
             if item.option.has_value:
-                message = '\t{Red}Unfortunately, you can\'t use Select Menu with params which has arguments!{ColorOff}'
-                print(Draw.paint(message))
+                Message.set_tabs(1)
+                Message.warning(
+                    title='Sorry :(',
+                    message='Unfortunately, you can\'t use Select Menu with params which has arguments!'
+                )
                 exit()
 
         with Listener(on_release=self.__listen_key) as listener:
