@@ -1,6 +1,6 @@
 import time
 
-from bash_menu_builder import input_menu, select_menu
+from bash_menu_builder import input_menu, select_menu, Draw
 from bash_menu_builder.dto import command_option_dto, menu_item_dto
 from bash_menu_builder.message import Message
 
@@ -90,11 +90,32 @@ def input_menu_view() -> None:
 
 
 if __name__ == '__main__':
-    Message.error(message='This is Error Message for test New length string \nTest')
+    Message.error(
+        message='Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+            '\nLorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,'
+            '\nwhen an unknown printer took a galley of type and scrambled it to make a type specimen book. '
+    )
     Message.set_tabs(1)
-    Message.warning(message='This is Error Message for test New length string \nTest')
+    Message.warning(
+        message='Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+            '\nLorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,'
+            '\nwhen an unknown printer took a galley of type and scrambled it to make a type specimen book. '
+    )
     Message.set_tabs(2)
-    Message.success(title='Some Title Text', message='This is Error \nMessage')
+    Message.success(
+        message='Lorem Ipsum is simply dummy text of the printing and typesetting industry...'
+            '\nLorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,'
+            '\nwhen an unknown printer took a galley of type and scrambled it to make a type specimen book. ',
+        title='Custom Success Title'
+    )
+    print(Draw.paint(
+        '{Red}Lorem Ipsum {Green}is simply {Blue}dummy text of the {Yellow}printing and typesetting industry...'
+        '\n{Purple}Lorem Ipsum has been the {Cyan}industry\'s standard dummy {White}text ever since the 1500s,'
+        '\n{BBlue}when an unknown {BBlack}printer took a galley {BRed}of type and scrambled it {BPurple}to make a type specimen book. '
+        '\n{UGreen}It has survived not only five centuries, {UYellow}but also the leap into electronic typesetting, {UCyan}remaining essentially unchanged.'
+        '\n{On_Blue}It was popularised {On_Yellow}in the 1960s with {IGreen}the release of Letraset sheets {IWhite}containing Lorem Ipsum passages, and more '
+        '\n{BIRed}recently with {BIYellow}desktop publishing {ColorOff}software like Aldus PageMaker including versions of Lorem Ipsum.'
+    ))
     # exit()
-    # input_menu_view()
-    select_menu_view()
+    input_menu_view()
+    # select_menu_view()
